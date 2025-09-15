@@ -1,0 +1,13 @@
+# Ngrok Setup for Streamlit Deployment
+
+1. Sign up for a free Ngrok account at https://ngrok.com/
+2. Download and install Ngrok
+3. Authenticate with your account: `ngrok authtoken YOUR_AUTH_TOKEN`
+4. To expose your Streamlit app: `ngrok http 8501`
+5. Share the generated URL to access your app from anywhere
+
+# Alternative deployment options:
+- Streamlit Sharing (https://share.streamlit.io/)
+- Heroku
+- AWS EC2
+- Google Cloud Run
