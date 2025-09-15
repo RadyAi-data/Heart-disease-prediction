@@ -1,3 +1,11 @@
+import subprocess
+import sys
+
+# Ensure joblib is installed
+try:
+    import joblib
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "joblib"])
 import os
 import joblib
 import streamlit as st
@@ -62,3 +70,4 @@ if st.button("Predict Risk"):
         st.error(f"Prediction error: {e}")
 
         st.write("Check that your input features match the training dataset.")
+
