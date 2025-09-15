@@ -12,7 +12,7 @@ MODEL_PATH = os.path.join(BASE_DIR, '..', 'models', 'heart_disease_pipeline.pkl'
 try:
     pipeline = joblib.load(MODEL_PATH)
 except FileNotFoundError:
-    st.error("❌ Trained model not found. Make sure heart_disease_pipeline.pkl exists in models/")
+    st.error("Trained model not found. Make sure heart_disease_pipeline.pkl exists in models/")
     st.stop()
 
 # -------------------------------
@@ -52,12 +52,13 @@ if st.button("Predict Risk"):
         proba = pipeline.predict_proba(input_df)[0][1]  # probability of class 1
 
         if prediction == 1:
-            st.error(f"🚨 High risk of heart disease! Probability: {proba:.1%}")
-            st.write("👉 Recommendation: Consult a cardiologist for further evaluation.")
+            st.error(f"High risk of heart disease! Probability: {proba:.1%}")
+            st.write(" Recommendation: Consult a cardiologist for further evaluation.")
         else:
-            st.success(f"✅ Low risk of heart disease. Probability: {proba:.1%}")
-            st.write("👉 Recommendation: Maintain a healthy lifestyle and regular checkups.")
+            st.success(f" Low risk of heart disease. Probability: {proba:.1%}")
+            st.write(" Recommendation: Maintain a healthy lifestyle and regular checkups.")
 
     except Exception as e:
         st.error(f"Prediction error: {e}")
+
         st.write("Check that your input features match the training dataset.")
