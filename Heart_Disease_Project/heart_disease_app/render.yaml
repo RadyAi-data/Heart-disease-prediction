@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: heart-disease-app
+    env: python
+    buildCommand: ""
+    startCommand: python app_flask.py
+    plan: free
