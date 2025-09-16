@@ -4,7 +4,7 @@ import joblib
 
 app = Flask(__name__)
 
-# Load your trained model
+# Load trained model
 model = joblib.load('heart_disease_pipeline.pkl')
 
 
@@ -48,3 +48,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
