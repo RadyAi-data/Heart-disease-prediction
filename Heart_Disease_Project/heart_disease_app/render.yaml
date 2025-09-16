@@ -3,5 +3,5 @@ services:
     name: heart-disease-app
     env: python
     buildCommand: ""
-    startCommand: python app_flask.py
+    startCommand: gunicorn app_flask:app --bind 0.0.0.0:$PORT
     plan: free
