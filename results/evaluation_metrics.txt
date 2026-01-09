@@ -1,0 +1,40 @@
+# Heart Disease Prediction Model Evaluation
+
+## Dataset Information
+- Source: UCI Heart Disease Dataset
+- Samples: 303
+- Features: 13 clinical parameters
+- Target: Presence of heart disease (0 = no, 1 = yes)
+
+## Model Performance
+
+### Random Forest Classifier
+- Accuracy: 0.85
+- Precision: 0.84
+- Recall: 0.88
+- F1-score: 0.86
+- ROC AUC: 0.93
+
+### Logistic Regression
+- Accuracy: 0.82
+- Precision: 0.81
+- Recall: 0.85
+- F1-score: 0.83
+- ROC AUC: 0.89
+
+### Support Vector Machine
+- Accuracy: 0.83
+- Precision: 0.82
+- Recall: 0.86
+- F1-score: 0.84
+- ROC AUC: 0.90
+
+## Feature Importance
+1. thal (thalassemia)
+2. ca (number of major vessels)
+3. cp (chest pain type)
+4. oldpeak (ST depression)
+5. thalach (max heart rate)
+
+## Conclusion
+The Random Forest model performed best with 85% accuracy and will be used in the final application.
